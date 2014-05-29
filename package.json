@@ -1,0 +1,23 @@
+{
+  "name": "helloworld",
+  "version": "0.0.0",
+  "description": "helloworld ==========",
+  "main": "helloworld.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rswang/helloworld"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rswang/helloworld/issues"
+  },
+  "homepage": "https://github.com/rswang/helloworld",
+  "dependencies": {
+    "express": "^4.3.2",
+    "logfmt": "^1.1.2"
+  }
+}
