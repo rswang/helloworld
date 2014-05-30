@@ -1,8 +1,15 @@
-var http = require('http');
+// example taken from heroku
+var express = require("express");
+var logfmt = require("logfmt");
+var app = express();
 
-http.createServer(function (request, response) {
-    response.writeHead(200, {'Content-Type': 'text/plain'});
-    response.end('Hello World\n');
-}).listen(3000);
+app.use(logfmt.requestLogger());
 
-console.log("Server started");
+app.get('/', function(req, res) {
+  res.send('<h1 id="test" style="font-family:Avenir; font-weight: lighter; color:#551A8B;">Hello World!</h1>');
+});
+
+var port = Number(process.env.PORT || 3000);
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
