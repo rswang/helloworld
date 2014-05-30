@@ -18,7 +18,7 @@ app.use(logfmt.requestLogger());
 
 app.get('/', function(req, res) {
   // res.send('<h1 id="test" style="font-family:Avenir; font-weight: lighter; color:#551A8B;">Hello World!</h1>');
-	res.render('index', {title: 'Login'});
+	res.render('public/index.jade', {title: 'Login'});
 });
 
 http.createServer(app).listen(app.get('port'), function () {
