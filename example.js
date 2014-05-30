@@ -1,3 +1,5 @@
+require("newrelic");
+
 // example taken from heroku
 var express = require("express");
 var logfmt = require("logfmt");
