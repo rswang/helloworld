@@ -3,16 +3,15 @@ require("newrelic");
 // example taken from heroku
 var express = require("express");
 var path = require("path");
-
 var app = express();
 
-app.configure(function() {
-	app.set('port', 3000);
-    app.use(express.logger('dev'));  /* 'default', 'short', 'tiny', 'dev' */
-    app.use(express.bodyParser()),
-    app.use(express.cookieParser()),
-    app.use(express.static(path.join(__dirname, 'public')));
-});
+// app.configure(function() {
+// 	app.set('port', 3000);
+//     app.use(express.logger('dev'));  /* 'default', 'short', 'tiny', 'dev' */
+//     app.use(express.bodyParser()),
+//     app.use(express.cookieParser()),
+//     app.use(express.static(path.join(__dirname, 'public')));
+// });
 
 app.get('/', function(req, res) {
   res.send('<h1 id="test" style="font-family:Avenir; font-weight: lighter; color:#551A8B;">Hello World!</h1>');
